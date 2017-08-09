@@ -162,3 +162,16 @@ Field 2: stream-key-your-set
 
 ffplay "rtmp://pub1.guoshi.com/live/newcetv1 live=1"
 
+
+
+ ---------------------------------------------------------
+ 服务器搭建成功 测试地址在 
+ 
+ nginx/html  index.html 
+ 
+ 可自行修改 
+ 
+ 可以在IE 输入服务器地址 查看index.html 
+ 不用重启
+ 
+ 
