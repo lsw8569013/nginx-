@@ -113,12 +113,12 @@ make install
     
  
 
- 
+ 可负责虚线内代码
  ---------------------------------------------------------------------------
  
  rtmp {
     server {
-            listen 1935;
+            listen 886;
             chunk_size 4096;
 
             application live {
