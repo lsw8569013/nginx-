@@ -21,6 +21,7 @@ cd /usr/lsw/nginx
 ## 3. 下载 nginx 和 nginx-rtmp源码（wget是一个从网络上自动下载文件的自由工具）
 
 wget http://nginx.org/download/nginx-1.8.1.tar.gz
+
 wget https://github.com/arut/nginx-rtmp-module/archive/master.zip
 
 ## 4. 安装unzip工具，解压下载的安装包
@@ -30,10 +31,15 @@ sudo apt-get install unzip
 ## 5.解压 nginx 和 nginx-rtmp安装包
 
 tar -zxvf nginx-1.8.1.tar.gz
+
 -zxvf分别是四个参数
+
 x : 从 tar 包中把文件提取出来
+
 z : 表示 tar 包是被 gzip 压缩过的，所以解压时需要用 gunzip 解压
+
 v : 显示详细信息
+
 f xxx.tar.gz :  指定被处理的文件是 xxx.tar.gz
 
 unzip master.zip
@@ -47,13 +53,16 @@ cd nginx-1.8.1
 ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master
 
 ## 8.编译安装 
+
 make
 sudo make install
 
 ## 9. 安装nginx init 脚本
 
 sudo wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx -O /etc/init.d/nginx
+
 sudo chmod +x /etc/init.d/nginx
+
 sudo update-rc.d nginx defaults
 
 ## 10. 启动和停止nginx 服务，生成配置文件
@@ -71,12 +80,12 @@ make install
 打开 /usr/local/nginx/conf/nginx.conf
 在末尾添加如下 配置
 
-复制代码
+复制代码-----------------
+ 
 rtmp {
     server {
             listen 1935;
             chunk_size 4096;
-
             application live {
                     live on;
                     record off;
@@ -88,7 +97,9 @@ rtmp {
         }
     }
 }
-复制代码
+
+复制代码----------------
+ 
 ## 13. 保存上面配置文件，然后重新启动nginx服务
 
 sudo service nginx restart
@@ -99,12 +110,15 @@ sudo service nginx restart
 ## 16: 使用 客户端，使用 rtmp协议进行视频实时采集
 
 Field 1: rtmp://your.vultr.ip/live/
+
 Field 2: stream-key-your-set
 
 
 服务器配置测试播放器：
+
 将播放器复制到目录：/usr/local/nginx/html/，然后修改播放地址
 
 用ffplay播放RTMP直播流：
+
 ffplay "rtmp://pub1.guoshi.com/live/newcetv1 live=1"
 
