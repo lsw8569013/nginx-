@@ -2,7 +2,8 @@
 
 服务器 环境 ubuntu 14.04 
  
-##1.先下载安装  nginx 和 nginx-rtmp 编译依赖工具
+## 1.先下载安装  nginx 和 nginx-rtmp 编译依赖工具
+
 sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
 
  
@@ -10,18 +11,22 @@ sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
  
 
 
-##2. 创建一个工作目录，并切换到工作目录
+## 2. 创建一个工作目录，并切换到工作目录
+
 mkdir /usr/jason/nginx
 cd /usr/lsw/nginx
 
-##3. 下载 nginx 和 nginx-rtmp源码（wget是一个从网络上自动下载文件的自由工具）
+## 3. 下载 nginx 和 nginx-rtmp源码（wget是一个从网络上自动下载文件的自由工具）
+
 wget http://nginx.org/download/nginx-1.8.1.tar.gz
 wget https://github.com/arut/nginx-rtmp-module/archive/master.zip
 
-##4. 安装unzip工具，解压下载的安装包
+## 4. 安装unzip工具，解压下载的安装包
+
 sudo apt-get install unzip
 
-##5.解压 nginx 和 nginx-rtmp安装包
+## 5.解压 nginx 和 nginx-rtmp安装包
+
 tar -zxvf nginx-1.8.1.tar.gz
 -zxvf分别是四个参数
 x : 从 tar 包中把文件提取出来
@@ -31,30 +36,36 @@ f xxx.tar.gz :  指定被处理的文件是 xxx.tar.gz
 
 unzip master.zip
 
-##6. 切换到 nginx-目录
+## 6. 切换到 nginx-目录
+
 cd nginx-1.8.1
 
-##7.添加 nginx-rtmp 模板编译到 nginx
+## 7.添加 nginx-rtmp 模板编译到 nginx
+
 ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master
 
-##8.编译安装 
+## 8.编译安装 
 make
 sudo make install
 
-##9. 安装nginx init 脚本
+## 9. 安装nginx init 脚本
+
 sudo wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx -O /etc/init.d/nginx
 sudo chmod +x /etc/init.d/nginx
 sudo update-rc.d nginx defaults
 
-##10. 启动和停止nginx 服务，生成配置文件
+## 10. 启动和停止nginx 服务，生成配置文件
+
 sudo service nginx start
 sudo service nginx stop
 
-##11. 安装 FFmpeg 下载ffmpeg zip ，然后解压
+## 11. 安装 FFmpeg 下载ffmpeg zip ，然后解压
+
 make
 make install
 
-##12. 配置 nginx-rtmp 服务器
+## 12. 配置 nginx-rtmp 服务器
+
 打开 /usr/local/nginx/conf/nginx.conf
 在末尾添加如下 配置
 
@@ -76,12 +87,15 @@ rtmp {
     }
 }
 复制代码
-##13. 保存上面配置文件，然后重新启动nginx服务
+## 13. 保存上面配置文件，然后重新启动nginx服务
+
 sudo service nginx restart
 
-##14. 如果你使用了防火墙，请允许端口 tcp 1935
+## 14. 如果你使用了防火墙，请允许端口 tcp 1935
 
-##16: 使用 客户端，使用 rtmp协议进行视频实时采集
+
+## 16: 使用 客户端，使用 rtmp协议进行视频实时采集
+
 Field 1: rtmp://your.vultr.ip/live/
 Field 2: stream-key-your-set
 
