@@ -82,7 +82,10 @@ make install
 在末尾添加如下 配置
 
  
+{
+    
     rtmp {
+    
         server {
     
             listen 1935;
@@ -106,10 +109,14 @@ make install
                     record off;
                     
             }
+            
         }
-    }
+        
+    }
+    
+} 
 
-
+ 
 
 
 
@@ -120,9 +127,9 @@ make install
 
 sudo service nginx restart
 
-### 14. 如果你使用了防火墙，请允许端口 tcp 1935
-
-
+### 14. 如果你使用了防火墙，请允许端口 tcp 886
+ 
+ 
 ### 16: 使用 客户端，使用 rtmp协议进行视频实时采集
 
 Field 1: rtmp://your.vultr.ip/live/
