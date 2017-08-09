@@ -91,7 +91,7 @@ make install
     
         server {
     
-            listen 1935;
+            listen 886;
             
             chunk_size 4096;
             
