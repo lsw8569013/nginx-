@@ -82,7 +82,7 @@ make install
 在末尾添加如下 配置
 
  
-{
+ 
     
     rtmp {
     
@@ -107,14 +107,11 @@ make install
                     live on;
                     
                     record off;
-                    
-            }
-            
-        }
-        
+                     }       
+        }        
     }
     
-} 
+ 
 
  
 
