@@ -1,8 +1,10 @@
 # nginx- 流媒体服务器搭建
 
 服务器 环境 ubuntu 14.04 
+
  
 ## 1.先下载安装  nginx 和 nginx-rtmp 编译依赖工具
+
 
 sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
 
