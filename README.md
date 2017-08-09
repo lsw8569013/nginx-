@@ -85,7 +85,7 @@ make install
 在末尾添加如下 配置
 
  
- 
+ ``` json
     
     rtmp {
     
@@ -114,7 +114,7 @@ make install
         }        
     }  
     
-    
+```
  
 
  可负责虚线内代码
