@@ -117,27 +117,7 @@ make install
 ```
  
 
- 可复制内代码
- ---------------------------------------------------------------------------
- 
- rtmp {
-    server {
-            listen 886;
-            chunk_size 4096;
-
-            application live {
-                    live on;
-                    record off;
-                    exec ffmpeg -i rtmp://localhost/live/$name -threads 1 -c:v libx264 -profile:v baseline -b:v 350K -s 640x360 -f flv -c:a aac -ac 1 -strict -2 -b:a 56k rtmp://localhost/live360p/$name;
-            }
-            application live360p {
-                    live on;
-                    record off;
-        }
-    }
-}
-
- ----------------------------------------------------------------------------------------------
+ 
  
 
 
