@@ -68,11 +68,13 @@ sudo update-rc.d nginx defaults
 ### 10. 启动和停止nginx 服务，生成配置文件
 
 sudo service nginx start
+
 sudo service nginx stop
 
 ### 11. 安装 FFmpeg 下载ffmpeg zip ，然后解压
 
 make
+
 make install
 
 ### 12. 配置 nginx-rtmp 服务器
