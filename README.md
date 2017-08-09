@@ -93,7 +93,7 @@ make install
     
             listen 886;
             
-            chunk_size 4096;
+            chunk_size 4096;
             
             application live {
             
@@ -112,7 +112,8 @@ make install
                     record off;
                      }       
         }        
-    }
+    }  
+    
     
  
 
