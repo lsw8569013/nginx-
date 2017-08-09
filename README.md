@@ -1,7 +1,8 @@
 # nginx- 流媒体服务器搭建
 
 服务器 环境 ubuntu 14.04 
-
+ 
+ 需要先安装 unzip vim 工具，自行百度安装
  
 ### 1.先下载安装  nginx 和 nginx-rtmp 编译依赖工具
 
@@ -165,6 +166,7 @@ ffplay "rtmp://pub1.guoshi.com/live/newcetv1 live=1"
 
 
  ---------------------------------------------------------
+ 
  服务器搭建成功 测试地址在 
  
  nginx/html  index.html 
