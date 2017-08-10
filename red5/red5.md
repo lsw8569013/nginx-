@@ -54,6 +54,8 @@
 ```
  
 ## 搭建 和直播参考自
-**[直播demo和服务器搭建](/red/red5.mhtml)**
+**[直播demo和服务器搭建](/red5/red5.mhtml)**
+
+
  
 转自 博客 http://blog.csdn.net/u011485531/article/details/56013148
