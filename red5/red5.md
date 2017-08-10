@@ -14,7 +14,12 @@
  
  ### 5.安装demo ,和flash 播放器
  
- ### 6.修改index.html 用编辑器打开index.html，把rtmp那个播放器的脚本修改成下面的
+ ### 6.修改index.html 
+ 
+ 用编辑器打开index.html，把rtmp那个播放器的脚本修改成下面的
+ 在这里面有两个直接协议的实现了，一个是RTMP，一个是RTMPT（是RTMP的变种，相当于RTMP用http包装后的协议）。 
+点击那个播放的图标就可以播放流媒体了，但是要直播我们app的流还需要配置一点东西，在red5的根目录下打开webapps/oflaDemo这个目录
+ 用编辑器打开index.html，把rtmp那个播放器的脚本修改成下面的
  
  ```html
  <center>
