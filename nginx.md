@@ -140,7 +140,8 @@ Field 2: stream-key-your-set
 
 服务器配置测试播放器：
 
-将播放器复制到目录：/usr/local/nginx/html/，然后修改播放地址
+播放器放到 https://github.com/lsw8569013/nginx-/FlashPlayer 
+将播放器复制到目录：/usr/local/nginx/html/，然后修改播放地址 sc://ip:端口
 
 用ffplay播放RTMP直播流：
 
