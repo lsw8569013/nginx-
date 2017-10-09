@@ -74,6 +74,8 @@ sudo service nginx stop
 
 ### 11. 安装 FFmpeg 下载ffmpeg zip ，然后解压
 
+./configure   (先配置然后才能编译)
+
 make
 
 make install
