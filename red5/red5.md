@@ -51,6 +51,8 @@
 </script>
 </center>
 
+推流地址为 streamer + file   如： rtmp://192.168.2.101/oflaDemo/test
+
 ```
 ###测试播放地址 ：http://localhost:5080/oflaDemo/index.html
 
